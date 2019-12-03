@@ -22,3 +22,10 @@ As the years go by, we can only expect the trend to rise - clubs will only go ou
 Rumours of PSG wonderkid, Kylian Mbappé having a price tag of €500 million isn’t far from the truth. And only one club is even remotely considering to buy him at that price.
 
 _Now how is that fair for the rest of the clubs?_
+
+As I've mentioned before, the trend of paying more for a player will only increase as the years go by.
+
+**Part I Goal:** Find the trend of how much money clubs splash for getting players. I'll try and explain the trend for which seasons saw an massive increase or decrease in spending; meaning, I'll try and attribute real-world stories and news to understand why there was an increase/decrease.
+
+**Part II Goal:** Next part consists of creating a prediction model. Using regressive models, we can try and predict the market value of players in the coming seasons.
+

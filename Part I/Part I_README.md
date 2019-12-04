@@ -2,7 +2,7 @@
 - _Transfers.csv_ - The CSV file that contains the full Kaggle dataset.
 - _Calculating_Difference.py_ - The python file that calculates the Difference metric and the Average Difference.
   - _Mean_Table.csv_ is created.
-  - _Line_Graph.png_ - Image of the line graph
+  - _LineGraph_Snap.png_ - Image of the line graph
 - _Plot_Difference.py_ - Python file where the line graph for Average Difference is plotted.
 
 ## Packages used in PART I:

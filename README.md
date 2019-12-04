@@ -7,7 +7,7 @@ There are two parts to this project of mine. The first one is understanding the 
 - This is not the finalised version. As the weeks go by and as I learn new skills, I will keep adding to this repository. I will keep tweaking the code, playing with the model, adding more feature and updating this documentation as frequent as I can.
 - The dataset I'll be using here is from Kaggle. Click [here](https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018) for the Kaggle link. And I'd like to thank Vardan; for creating this excellent dataset.
 - I would love it if you - the reader, has any comments or suggestions about anything. I'm a student and I intend to be one even after I graduate.
-- The code is all in Python 3.7 and I use PyCharm Community Edition as my IDE.
+- The code is all in Python 3.7 and I use _PyCharm Community Edition_ as my IDE.
 
 _Now let's dive in!_
 
@@ -65,7 +65,7 @@ Players like Neymar, Vinicius Junior, Dybala, Eden Hazard, Marco Reus, and Kevin
 
 So, my goal here is to understand the trend of how clubs pay for players over multiple seasons. And to understand and study that, I've to introduce a new parameter; **Difference**.
 
-                                             Difference = Tranfer Fee - Market Value
+                                            Difference = Tranfer Fee - Market Value
 
 #### What does _Difference_ tell us?
 
@@ -148,8 +148,8 @@ From the graph, we can see the Average Difference throughout the 14 seasons. I'v
 
 ## Circle A:
 
-                                                    2005/2006 ----> 2006/2007
-                                                    €10822    ----> -€298755
+                                                  2005/2006 ----> 2006/2007
+                                                  €10822    ----> -€298755
 
 At circle A, we can see a decrease from ten thousand euros to an abysmal negative €3 million. The negative value is an indication of football clubs paying less than the market value for players in the 2006/2007 season. This means that on an average, players were being undersold.
 
@@ -165,8 +165,8 @@ We've to remember that Juventus weren't the only club hurt by the Calciopoli sca
 
 ## Circle B to Circle C:
 
-                                                    2012/2013 ----> 2013/2014
-                                                    -€10333   ----> €1599980
+                                                  2012/2013 ----> 2013/2014
+                                                  -€10333   ----> €1599980
 
 Back in 2011, the State of Qatar acquired Paris Saint-Germain F.C.(PSG) through _Qatar Sports Investments(QSI)_. But initially, the new owners didn't spend money. During and after the 2012/2013, PSG hit the market buying superstars like Zlatan Ibrahimović, Edinson Cavani, Thiago Silva and other talented players like Lavezzi, Marco Verratti, Lucas Moura and Digne.
 
@@ -179,8 +179,8 @@ Don't get me wrong. Gareth Bale is a fantastic player and what he's done with Re
 ## Circle C to Circle D:
 
 
-                                   2013/2014 ---> 2014/2015 ----> 2015/2016 ----> 2016/2017 ----> 2017/2018
-                                    €1599980 ---> €2298612  ----> €4167077  ----> €5570964  ----> €6897261
+                         2013/2014 ---> 2014/2015 ----> 2015/2016 ----> 2016/2017 ----> 2017/2018
+                          €1599980 ---> €2298612  ----> €4167077  ----> €5570964  ----> €6897261
 
 It goes without saying that today's transfer market is bloated and it will only become worse as the seasons go by. And this can be seen in the meteoric rise the Average Difference makes from the 2014/2015 season to the 2017/2018 season; **from €1.6 million to €7 million**. This means that the average amount of money football clubs are paying for players above the market was €7 million as of 2017/2018. That is a massive **337% increase in overspending**. If this trend is to continue, which I'm sure it will, we could see huge amounts of money being paid by clubs to get talent.
 

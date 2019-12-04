@@ -7,7 +7,7 @@ There are two parts to this project of mine. The first one is understanding the 
 - This is not the finalised version. As the weeks go by and as I learn new skills, I will keep adding to this repository. I will keep tweaking the code, playing with the model, adding more feature and updating this documentation as frequent as I can.
 - The dataset I'll be using here is from Kaggle. Click [here](https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018) for the Kaggle link. And I'd like to thank Vardan; for creating this excellent dataset.
 - I would love it if you - the reader, has any comments or suggestions about anything. I'm a student and I intend to be one even after I graduate.
-- The code is all Python 3.7 and I use PyCharm Community Edition as my IDE.
+- The code is all in Python 3.7 and I use PyCharm Community Edition as my IDE.
 
 _Now let's dive in!_
 
@@ -45,6 +45,10 @@ It contains:
 - Market Value of the player
 - Transfer Fee paid for the player
 
+Here is a screengrab of the dataset as viewed on Kaggle.
+
+![Dataset_Snap](https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Dataset_Snap.PNG)
+
 #### Some things to know about the Dataset:
 - Market Value for players in the seasons 2000/2001, 2001/2002, 2002/2003, 2003/2004 and a few in the other seasons are unavailable. So we'll be dropping them in our analysis.
 - Since there is only limited data in the 2018/2019 season, **for Part I of the project, I'll be dropping them.**
@@ -81,5 +85,80 @@ _We can argue on and on about how the market today is bloated and try to justify
 
 Now to go into the code and explain a bit of everything I did. 
 
-After importing the necessary packages, reading the csv file and dropping the rows with NaN market values, we split the dataset by each season and find the _Difference for each player_ and the _Average Difference for that season._
+First, I importing the necessary packages, read the csv file and drop the rows with NaN market values. Then, I split the dataset by each season and find the _Difference for each player_ and using numpy we calculate the _Average Difference for that season._
 
+
+```python
+#Reading the dataset into an object
+a = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Transfers.csv')
+
+#Cleaning the Dataset of NaN values
+a1 = a.dropna()
+
+#Grouping the dataset by each Season
+a2 = a1.groupby('Season')
+
+#Find the difference for each player in 2004/2005 season
+a3 = a2.get_group('2004-2005')
+a3['Difference'] = a3['Transfer_fee'] - a3['Market_value']
+#Finding the mean of this difference for the season
+mean3 = round(np.mean(a3.Difference))
+```
+
+The above snippet is just for the 2004/2005 season; we do this for all the 14 seasons. Then we save all these Average Difference values in a seperate CSV file called _Mean_Table.csv_. This table is going to help us plot the line graph for our analysis purpose.
+
+This is how the _Mean_Table.csv_ table looks like.
+
+Season | Average Difference
+:---:  | :---:
+2004/2005 | 258814
+2005/2006 | 10822
+2006/2007 | -298755
+2007/2008 | 1651277
+2008/2009 | 1522716
+2009/2010 | 1532672
+2010/2011 | 826929
+2011/2012 | 131774
+2012/2013 | -103333
+2013/2014 | 1599980
+2014/2015 | 2298612
+2015/2016 | 4167077
+2016/2017 | 5570964
+2017/2018 | 6897261
+
+From the table, you can see the values of Average Difference vary drastically between seasons than others with some even going into the negatives. Now, using matplot.lib, I will plot the line graph to get a clear picture.
+
+```python
+#Reading the data from Mean_Table into an object
+b = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Mean_Table.csv')
+
+#Plotting a line graph for the data
+b.plot(x='Season', y='Average Difference')
+plt.title('The Average Difference Over All Seasons')
+plt.xlabel('Season')
+plt.ylabel('Average Difference')
+plt.show()
+```
+
+And this is what the plot looks like:
+
+![LineGraph_Snap](https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20I/LineGraph_Snap.PNG)
+
+From the graph, we can see the Average Difference throughout the 14 seasons. I've marked out certain edges of prominent increase and decrease with red circles that I'll go about explaining.
+
+## Circle A:
+
+                                                    2005/2006 ----> 2006/2007
+                                                    €10822    ----> -€298755
+
+At circle A, we can see a decrease from ten thousand euros to an abysmal negative €3 million. The negative value is an indication of football clubs paying less than the market value for players in the 2006/2007 season. This means that on an average, players were being undersold.
+
+This phenomenon can be attributed to the [_2006 Italian Football Scandal_](https://www.bbc.com/sport/football/49910626), a.k.a _Calciopoli_.
+
+Towards the end of the 2005/2006 season, many Italian clubs were caught in a match-fixing scandal. Investigations discovered that teams paid money to get favourable referees for their matches helping them win games.
+
+The Calciopoli scandal verdict was huge. Most notably, Italian Football Giants; _Juventus_ were fined €75,000, stripped of their 2004/2005 Serie A title, relegated to Serie and deducted 30 points at the start of the 2006/2007 season. This relegation resulted in the majority of their big players leaving. And due to the scandal, Juventus didn't have any selling power over their players who didn't want to play in a lower league. They had to undersell big players like Zlatan Ibrahimović, Fabio Cannavaro, Patrick Vieira and Gianluca Zambrotta.
+
+But how are few players being sold for less than their market value result in a **-2660% decrease in spending**?
+
+We've to remember that Juventus weren't the only club hurt by the Calciopoli scandal. Other clubs like A.C. Milan, Fiorentina, Lazio and Reggina were caught in the scandal. While A.C Milan and Reggina had points deducted and fines given, Lazio and Fiorentina were relegated alongside Juventus. In the wake of the scandal, some 30 players who played in the 2006 FIFA World Cup left the Serie A to other leagues and many smaller players moved out of the Serie A.

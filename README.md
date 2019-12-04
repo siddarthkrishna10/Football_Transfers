@@ -71,7 +71,7 @@ So, my goal here is to understand the trend of how clubs pay for players over mu
 
 It's simple enought to see what Difference is; it's just the difference between the Transfer Fee and Market Value. But in a footballing context, it's a bit more elaborate. As you know, a club sets a market value for a players based on various factors(age, position, birth country, skill, etc), and a buying club almost always never pays the exact amount set by the selling club. It's sometimes(mostly) more than the market value and sometimes less.
 
-With Difference, we can see how much extra/less a club has paid for a certain player. And for majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few season earlier, Liverpool were in dire need of a defender and they ended up paying €84.65 million. These are some of the cases where the club paid way more than the market value.
+With Difference, we can see how much extra/less a club has paid for a certain player. And for majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few season earlier, Liverpool were in dire need of a defender and they ended up paying €78.8 million. These are some of the cases where the club paid way more than the market value.
 
 There are also cases where the buying club paid less than the market value. A small example for this is when legendary journeyman Zlatan Ibrahimović went for a fraction less than his Market Value from Juventus to Inter. There is a reason for this which will be explained later.
 
@@ -159,6 +159,53 @@ Towards the end of the 2005/2006 season, many Italian clubs were caught in a mat
 
 The Calciopoli scandal verdict was huge. Most notably, Italian Football Giants; _Juventus_ were fined €75,000, stripped of their 2004/2005 Serie A title, relegated to Serie and deducted 30 points at the start of the 2006/2007 season. This relegation resulted in the majority of their big players leaving. And due to the scandal, Juventus didn't have any selling power over their players who didn't want to play in a lower league. They had to undersell big players like Zlatan Ibrahimović, Fabio Cannavaro, Patrick Vieira and Gianluca Zambrotta.
 
-But how are few players being sold for less than their market value result in a **-2660% decrease in spending**?
+But how are few players being sold for less than their market value result in a **2860% decrease in spending**?
 
-We've to remember that Juventus weren't the only club hurt by the Calciopoli scandal. Other clubs like A.C. Milan, Fiorentina, Lazio and Reggina were caught in the scandal. While A.C Milan and Reggina had points deducted and fines given, Lazio and Fiorentina were relegated alongside Juventus. In the wake of the scandal, some 30 players who played in the 2006 FIFA World Cup left the Serie A to other leagues and many smaller players moved out of the Serie A.
+We've to remember that Juventus weren't the only club hurt by the Calciopoli scandal. Other clubs like A.C. Milan, Fiorentina, Lazio and Reggina were caught in the scandal. While A.C Milan and Reggina had points deducted and fines given, Lazio and Fiorentina were relegated alongside Juventus. In the wake of the scandal, there was a mass exodus of players leaving the Serie A. Around 30 players who featured in the 2006 FIFA World Cup left. Despite Italy being champions, the scandal had hurt Serie A massively. Italian clubs were forced to sell players below the market value. This is the major reason for underspending by football clubs during this period.
+
+## Circle B to Circle C:
+
+                                                    2012/2013 ----> 2013/2014
+                                                    -€10333   ----> €1599980
+
+Back in 2011, the State of Qatar acquired Paris Saint-Germain F.C.(PSG) through _Qatar Sports Investments(QSI)_. But initially, the new owners didn't spend money. During and after the 2012/2013, PSG hit the market buying superstars like Zlatan Ibrahimović, Edinson Cavani, Thiago Silva and other talented players like Lavezzi, Marco Verratti, Lucas Moura and Digne.
+
+Contrary to popular belief, PSG didn't splash huge amounts of money on these players. For majority of their transfers, they paid only a fraction above the market value, they acquired Ibrahimović for **less than 43% of his market value**. Unlike today, PSG at the beginning of the takeover did good business and made many sensible buys ushering in their era of dominance over the Ligue One.
+
+We can see a spike from negative ten thousand euros to a staggering €1.6 million in the season 2013/2014 and the reason may lie in one transfer; Gareth Bale moving from Tottenham Hotspurs to Real Madrid for €101 million. The _Los Blancos_ paid **55% more than the market value** for Bale. In my personal opinion, this I believe is where the trend of overpaying for remotely good players in the hopes that they'd become superstars began.
+
+Don't get me wrong. Gareth Bale is a fantastic player and what he's done with Real Madrid is fantastic. But the amount of the money they've spent on him, the medical expenses and the negative-_ish_ PR he brings with him just doesn't justify his price tag. Every other big transfer after this only made things worse for the transfer market in general expect a few.
+
+## Circle C to Circle D:
+
+
+                                   2013/2014 ---> 2014/2015 ----> 2015/2016 ----> 2016/2017 ----> 2017/2018
+                                    €1599980 ---> €2298612  ----> €4167077  ----> €5570964  ----> €6897261
+
+It goes without saying that today's transfer market is bloated and it will only become worse as the seasons go by. And this can be seen in the meteoric rise the Average Difference makes from the 2014/2015 season to the 2017/2018 season; **from €1.6 million to €7 million**. This means that the average amount of money football clubs are paying for players above the market was €7 million as of 2017/2018. That is a massive **337% increase in overspending**. If this trend is to continue, which I'm sure it will, we could see huge amounts of money being paid by clubs to get talent.
+
+Just to paint a clearer picture, here are a few transfers with huge overspending percentages in the five seasons:
+- Neymar - €222 million, **122% more** than market value
+- Virgil Van Dijk - €78.8 million, **162% more** than market value
+- Paul Pogba - €105 million, **50% more** than the market value
+- Ousmane Dembele - €115 million, **248% more** than the market value
+- Anthony Martial - €60 million, **650% more** than the market value
+- N’Golo Kante - €9 million, **100% more** than the market value
+
+These are just a few examples of paying too much for a player. Hundreds of transfers over the past five years have been bloated and I can see it only increasing.
+
+Takeover of clubs by oil money has completely changed the whole game. Pep Guardiola is given a war chest every window and gets the every player he wants. Today, City can field two completely different squads that can challenge for the league title. Like attackers, today wing-backs and fullbacks are of high demand. This is due to the tactics of the game changing. Wingplay has become essential in the past few seasons and the transfers show for it.
+
+## Conclusion:
+
+Straight off, this is bad for the sport. As the bigger and richer clubs continue to pay exaggerated prices for players, the clubs without the funds and resources can be left behind without the means to compete. This creates a huge gap in the league tables and will see a huge decline in the overall quality of football each season.
+
+Only a few footballers live up to their price tag. Players like Cristiano Ronaldo, Zinedine Zidane, and most recently Virgil Van Dijk are some of the best examples of players worth the extra money.
+
+I don't see a straightforward solution to this problem. Yes...football associations across the globe do have spending caps and regualtions to battle this, but none of them seem to be working as every transfer window we witness a big-money transfer that makes no sense at all.
+
+Till the day football clubs stop paying way above the market value for players and pay for what they're worth and what what they could bring to the club, instead of paying for hype and attention, it'll only become worse. But my pessimestic side says that it's never going to happen.
+
+
+# Part II
+

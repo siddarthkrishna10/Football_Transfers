@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
-c = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Transfers.csv')
+c = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20II/Transfers.csv')
 
 c1 = c.dropna()
 
@@ -27,7 +27,7 @@ y_pred = cx.predict(X_test)
 
 #Writing the actual and predicted values into a csv file
 df = pd.DataFrame({'Actual': y_test.flatten(), 'Predicted': y_pred.flatten()})
-df.to_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Actual_Predicted.csv')
+df.to_csv('Actual_Predicted.csv')
 
 #Plotting the scatter plot and linear regression line
 plt.scatter(X_test, y_test, color='blue')

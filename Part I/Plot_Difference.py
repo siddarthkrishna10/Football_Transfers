@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #Reading the data from Mean_Table into an object
-b = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Mean_Table.csv')
+b = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20I/Mean_Table.csv')
 
 #Plotting a line graph for the data
 b.plot(x='Season', y='Average Difference')

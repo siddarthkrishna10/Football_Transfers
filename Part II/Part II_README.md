@@ -2,7 +2,7 @@
 - _Transfers.csv_ - The CSV file that contains the full Kaggle dataset.
 - _Plot_Regression.py_ - Python file for creating the full Linear Regression model.
   - _Actual_Predicted.csv_ is created.
-  - _Linear_Regression.png_ - Image of the linear regression model and scatter plot
+  - _LinearPlot_Snap.png_ - Image of the linear regression model and scatter plot
 
 ## Packages used in PART II:
 - _import numpy as np_

@@ -5,7 +5,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 #Reading the dataset into an object
-a = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Transfers.csv')
+a = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20II/Transfers.csv')
 
 #Cleaning the Dataset of NaN values
 a1 = a.dropna()

@@ -1,4 +1,4 @@
-# Prediction Model for Football Transfers.
+# Spending Trends in Football Clubs and Prediction Model for Football Transfers.
 Understanding Trends in Football Transfers and trying to build a prediction model to predict the market value of players using Python.
 
 There are two parts to this project of mine. The first one is understanding the trend in football transfers over 14 seasons. The second part is where I try to build a prediction model to try and predict the market value of players in the future.

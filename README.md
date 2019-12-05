@@ -318,4 +318,4 @@ As Part I of this project says, we can always see trends and understand why such
 
 If there was a way to take into account all these factors and predict the market value, football clubs then wouldn't be running around throwing money like they do today. But that's not that case!
 
-***Remember?! In a few months or years, Mbappe can be bought for €500 million...that’s half a billion!! Let that sink in!***
+***Remember?! In a few months or years, Mbappé can be bought for €500 million...that’s half a billion!! Let that sink in!***

@@ -90,7 +90,7 @@ First, I importing the necessary packages, read the csv file and drop the rows w
 
 ```python
 #Reading the dataset into an object
-a = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Transfers.csv')
+a = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20I/Transfers.csv')
 
 #Cleaning the Dataset of NaN values
 a1 = a.dropna()
@@ -130,7 +130,7 @@ From the table, you can see the values of Average Difference vary drastically be
 
 ```python
 #Reading the data from Mean_Table into an object
-b = pd.read_csv('C:/Users/Siddhardh/Desktop/OiDS Project/Code/Mean_Table.csv')
+b = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20I/Mean_Table.csv')
 
 #Plotting a line graph for the data
 b.plot(x='Season', y='Average Difference')
@@ -216,11 +216,106 @@ Linear Regression is a type of analysis which creates a model between two variab
 
 Here, we are going to take **Market Value** as the explanatory variable because that's is what we need to calculate and **Transfer Fee** as the dependant variable.
 
-```
-**Note**: Later on, I'll add more features to dependant variable and try and create a well-defined model that what is present here
-```
+> Note: Later on, I'll add more features to dependant variable and try and create a well-defined model that what is present here.
 
 #### Why predict Market Value and not Transfer Fee?
 The transfer amount a club pays has a lot of outside factors influencing it, like the need for the player, the club's stature, their current form, their financial situation and many more. It's also influenced by the player, he should be willing to move and that brings in even more factors into the equation like personal ones such as willing to move to a new country or city and such. Sometimes players can force a move to the club they desire and the selling club could be forced to sell below the market value. Sometimes the buying club could be desperate for a player and the selling club can use this to their advantage and make the former pay more. 
 
 These are just the basic reasons why we can't truly predict the Transfer Fee. But what we can and will try to do is to predict the market value of future players.
+
+We're going to be using _scikit learn_ to help us with building this prediction model. Like in Part I, I start off by reading the dataset into an object and dropping the rows with NaN values.
+
+I assign the Tranfer Value to the dependant variable **y** and Market Value to the explanatory variable **X**. Then, using scikit learn, I split the data into training data and test data.
+
+```python
+c = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20II/Transfers.csv')
+
+c1 = c.dropna()
+
+#Creating your Linear Regression objects; the dependant variable and explanatory variable
+X = c1['Transfer_fee'].values.reshape(-1, 1)
+y = c1['Market_value'].values.reshape(-1, 1)
+
+#Splitting your data into training and test data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+```
+
+We use the training data to train the regression model and the test data to test the accuracy of this model.
+
+Next, we create an object for Linear Regression and go on to fit the model and calculate the intercepts and slope.
+
+```python
+#Using Linear Regression from scikit learn, fitting the model and calculating the intercepts and slope
+cx = LinearRegression()
+cx.fit(X_train, y_train)
+print('Intercept:', cx.intercept_)
+print('Coefficient:', cx.coef_)
+```
+
+Finally, I use the test data to predict the values and plot a scatter graph with the linear regression line.
+
+```python
+#Predicting using test data
+y_pred = cx.predict(X_test)
+
+#Writing the actual and predicted values into a csv file
+df = pd.DataFrame({'Actual': y_test.flatten(), 'Predicted': y_pred.flatten()})
+df.to_csv('Actual_Predicted.csv')
+
+#Plotting the scatter plot and linear regression line
+plt.scatter(X_test, y_test, color='blue')
+plt.plot(X_test, y_pred, color='red', linewidth=1)
+plt.show()
+```
+
+![LinearPlot_Snap](https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20II/LinearPlot_Snap.PNG)
+
+Now that we've trained and tested the model resulting in a table; _Actual_Predicted.csv_ table, and plotted the data in a scatter graph with Linear Regression, we can evaluate our model. 
+
+To do that, we need to calculate three evaluation metrics:
+- _Mean Absolute Error(MAE):_ This is the mean of the absolute value of errors.
+- _Mean Squared Error(MSE):_ This is the mean of the squared errors.
+- _Root Mean Squared Error(RMSE):_ This is the square root of the mean squared errors.
+
+Again using scikit learn, we can find these values:
+
+```python
+mean = c1["Market_value"].mean()
+print('Mean of Market Value:', mean)
+
+#Calclulating evaluation metrics to evalute your regression model
+print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
+print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))
+print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+```
+
+And the values are:
+
+```
+Mean of Market Value: 8622469.476744186
+Mean Absolute Error: 3544174.170565751
+Mean Squared Error: 27095585273554.777
+Root Mean Squared Error: 5205341.9939092165
+```
+
+From these values, we can see that the **RSME**(5205342) **is more than 10% of the mean value** of Market Value(8622469).
+
+#### What does this tell us?
+Since our RSME is more than 10% of the mean of Market Value, our model isn't very accurate, but can still make decent predictions.
+
+## Conclusion:
+
+#### Why is the model inaccurate?
+- Poor (or) Not Enough Features: As of the first version of this project, I haven't added multiple features in our model. Remember when I said, that the Market Value of a football player is determined by his age, birth country, position, skill and so on. And since, the only dependant feature we took here is Tranfer Fee, it isn't sufficient.
+
+
+> Note: In the future, I will add more features, try to vectorize the non-integar values and try and create an accurate model.
+
+- The Ever-changing Game: Football happens to be the most popular sport and that makes it an ever-changing sport. For a few years, midfielders are important and then all of a sudden, defenders are the most sought after. One year, Spain is producing the best young talent, another year, Dutch youngsters are setting the stage on fire! Even if we managed to have a perfect working model right now, it would become obselete in a few seasons.
+
+#### So, how do you take all this as quantifiable features and use them in a model for a more accurate prediction?
+As Part I of this project says, we can always see trends and understand why such and such happened. But, external factors play a major role in football transfers, even fans and media can hype and inflate a player's market value.
+
+If there was a way to take into account all these factors and predict the market value, football clubs then wouldn't be running around throwing money like they do today. But that's not that case!
+
+***Remember?! In a few months or years, Mbappe can be bought for €500 million...that’s half a billion!! Let that sink in!***

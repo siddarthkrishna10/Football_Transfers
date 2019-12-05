@@ -1,4 +1,4 @@
-# Predictive Model for Football Transfers.
+# Prediction Model for Football Transfers.
 Understanding Trends in Football Transfers and trying to build a prediction model to predict the market value of players using Python.
 
 There are two parts to this project of mine. The first one is understanding the trend in football transfers over 14 seasons. The second part is where I try to build a prediction model to try and predict the market value of players in the future.
@@ -6,16 +6,16 @@ There are two parts to this project of mine. The first one is understanding the 
 #### Some important things to consider before going into in:
 - This is not the finalised version. As the weeks go by and as I learn new skills, I will keep adding to this repository. I will keep tweaking the code, playing with the model, adding more feature and updating this documentation as frequent as I can.
 - The dataset I'll be using here is from Kaggle. Click [here](https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018) for the Kaggle link. And I'd like to thank Vardan; for creating this excellent dataset.
-- I would love it if you - the reader, has any comments or suggestions about anything. I'm a student and I intend to be one even after I graduate.
+- I would love it if you - the reader, have any comments or suggestions about anything. I'm a student and I intend to be one even after I graduate.
 - The code is all in Python 3.7 and I use _PyCharm Community Edition_ as my IDE.
 
 _Now let's dive in!_
 
 # Overview
 
-Football clubs these days are paying exorbitant prices to get their players. Defenders are going for €60-70 million, playmakers for €100-120 million and superstars for even more. Every club and fan will try and justify the amount spent on certain players and their the points they make might be valid at the end. But all in all, paying millions in the 60s and 70s is too much and it's hurting the market in a bad way.
+Football clubs these days are paying exorbitant prices to get their players. Defenders are going for €60-70 million, playmakers for €100-120 million and superstars for even more. Every club and fan will try and justify the amount spent on certain players and the points they make might be valid at the end. But all in all, paying millions in the 60s and 70s is too much and it's hurting the market in a bad way.
 
-Harry Maguire might be the answer to your defensive problems, but paying €93 million for a player who's shown only glimpses of skill and has been good only over two seasons is just throwing money. But to be fair to Harry, he needs to time to settle and United aren't in a good place right now. Maybe if the things turn around for them, we can see if Maguire is really worth the money.
+Harry Maguire might be the answer to your defensive problems, but paying €93 million for a player who's shown only glimpses of skill and has been good only over two seasons is just throwing money. But to be fair to Harry, he needs time to settle and United aren't in a good place right now. Maybe if the things turn around for them, we can see if Maguire is worth the money.
 
 As the years go by, we can only expect the trend to rise - clubs will only go out of their way and we can see them paying more and more in the hopes of getting that one player who’ll take them to great heights. 
 
@@ -25,7 +25,7 @@ _Now how is that fair for the rest of the clubs?_
 
 As I've mentioned before, the trend of paying more for a player will only increase as the years go by.
 
-**Part I Goal:** Find the trend of how much money clubs splash for getting players. I'll try and explain the trend for which seasons saw an massive increase or decrease in spending; meaning, I'll try and attribute real-world stories and news to understand why there was an increase/decrease.
+**Part I Goal:** Find the trend of how much money clubs splash for getting players. I'll try and explain the trend for which seasons saw a massive increase or decrease in spending; meaning, I'll try and attribute real-world stories and news to understand why there was an increase/decrease.
 
 **Part II Goal:** Next part consists of creating a prediction model. Using regressive models, we can try and predict the market value of players in the coming seasons.
 
@@ -69,23 +69,23 @@ So, my goal here is to understand the trend of how clubs pay for players over mu
 
 #### What does _Difference_ tell us?
 
-It's simple enought to see what Difference is; it's just the difference between the Transfer Fee and Market Value. But in a footballing context, it's a bit more elaborate. As you know, a club sets a market value for a players based on various factors(age, position, birth country, skill, etc), and a buying club almost always never pays the exact amount set by the selling club. It's sometimes(mostly) more than the market value and sometimes less.
+It's simple enough to see what Difference is; it's just the difference between the Transfer Fee and Market Value. But in a footballing context, it's a bit more elaborate. As you know, a club sets a market value for a player based on various factors(age, position, birth country, skill, etc), and a buying club almost always never pays the exact amount set by the selling club. It's sometimes(mostly) more than the market value and sometimes less.
 
-With Difference, we can see how much extra/less a club has paid for a certain player. And for majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few season earlier, Liverpool were in dire need of a defender and they ended up paying €78.8 million. These are some of the cases where the club paid way more than the market value.
+With Difference, we can see how much extra/less a club has paid for a certain player. And for the majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few seasons earlier, Liverpool were in dire need of a defender and they ended up paying €78.8 million. These are some of the cases where the club paid way more than the market value.
 
-There are also cases where the buying club paid less than the market value. A small example for this is when legendary journeyman Zlatan Ibrahimović went for a fraction less than his Market Value from Juventus to Inter. There is a reason for this which will be explained later.
+There are also cases where the buying club paid less than the market value. A small example of this is when legendary journeyman Zlatan Ibrahimović went for a fraction less than his Market Value from Juventus to Inter. There is a reason for this which will be explained later.
 
-This is what my simple named parameter, Difference tells us. As much as I'd love to attribute a reason to all the transfers that has a difference, it makes no sense to do it because not every transfer has a story and even if that was the case, I won't have the time to do it. _I'd be writing a magnum opus if I did that!_
+This is what my simple named parameter, Difference tells us. As much as I'd love to attribute a reason to all the transfers that have a difference, it makes no sense to do it because not every transfer has a story and even if that was the case, I won't have the time to do it. _I'd be writing a magnum opus if I did that!_
 
-Therefore, in an attempt to explain and paint the full picture of transfer trends, we find out the **Average Difference** over 14 seasons that football clubs have been paying. This is where I'd go about explaining why certain season saw a rise/fall in spending.
+Therefore, in an attempt to explain and paint the full picture of transfer trends, we find out the **Average Difference** over 14 seasons that football clubs have been paying. This is where I'd go about explaining why a certain season saw a rise/fall in spending.
 
-Conclusivley, the goal of this part is to study the trends of how football clubs have started to pay more and more for players in the past few seasons.
+Conclusively, the goal of this part is to study the trends of how football clubs have started to pay more and more for players in the past few seasons.
 
 _We can argue on and on about how the market today is bloated and try to justify your club's spending, but we can all agree that €222 million for Neymar is an absurd amount of money._
 
 Now to go into the code and explain a bit of everything I did. 
 
-First, I importing the necessary packages, read the csv file and drop the rows with NaN market values. Then, I split the dataset by each season and find the _Difference for each player_ and using numpy we calculate the _Average Difference for that season._
+First, I import the necessary packages, read the CSV file and drop the rows with NaN market values. Then, I split the dataset by each season and find the _Difference for each player_ and using numpy we calculate the _Average Difference for that season._
 
 
 ```python
@@ -105,7 +105,7 @@ a3['Difference'] = a3['Transfer_fee'] - a3['Market_value']
 mean3 = round(np.mean(a3.Difference))
 ```
 
-The above snippet is just for the 2004/2005 season; we do this for all the 14 seasons. Then we save all these Average Difference values in a seperate CSV file called _Mean_Table.csv_. This table is going to help us plot the line graph for our analysis purpose.
+The above snippet is just for the 2004/2005 season; we do this for all the 14 seasons. Then we save all these Average Difference values in a separate CSV file called _Mean_Table.csv_. This table is going to help us plot the line graph for our analysis purpose.
 
 This is how the _Mean_Table.csv_ table looks like.
 
@@ -126,7 +126,7 @@ Season | Average Difference
 2016/2017 | 5570964
 2017/2018 | 6897261
 
-From the table, you can see the values of Average Difference vary drastically between seasons than others with some even going into the negatives. Now, using matplot.lib, I will plot the line graph to get a clear picture.
+From the table, you can see the values of Average Difference vary drastically between seasons than others with some even going into the negatives. Now, using matplot, I will plot the line graph to get a clear picture.
 
 ```python
 #Reading the data from Mean_Table into an object
@@ -161,7 +161,7 @@ The Calciopoli scandal verdict was huge. Most notably, Italian Football Giants; 
 
 But how are few players being sold for less than their market value result in a **2860% decrease in spending**?
 
-We've to remember that Juventus weren't the only club hurt by the Calciopoli scandal. Other clubs like A.C. Milan, Fiorentina, Lazio and Reggina were caught in the scandal. While A.C Milan and Reggina had points deducted and fines given, Lazio and Fiorentina were relegated alongside Juventus. In the wake of the scandal, there was a mass exodus of players leaving the Serie A. Around 30 players who featured in the 2006 FIFA World Cup left. Despite Italy being champions, the scandal had hurt Serie A massively. Italian clubs were forced to sell players below the market value. This is the major reason for underspending by football clubs during this period.
+We have to remember that Juventus weren't the only club hurt by the Calciopoli scandal. Other clubs like A.C. Milan, Fiorentina, Lazio and Reggina were caught in the scandal. While A.C Milan and Reggina had points deducted and fines were given, Lazio and Fiorentina were relegated alongside Juventus. In the wake of the scandal, there was a mass exodus of players leaving the Serie A. Around 30 players who featured in the 2006 FIFA World Cup left. Despite Italy being champions, the scandal had hurt Serie A massively. Italian clubs were forced to sell players below the market value. This is the major reason for underspending by football clubs during this period.
 
 ## Circle B to Circle C:
 
@@ -170,11 +170,11 @@ We've to remember that Juventus weren't the only club hurt by the Calciopoli sca
 
 Back in 2011, the State of Qatar acquired Paris Saint-Germain F.C.(PSG) through _Qatar Sports Investments(QSI)_. But initially, the new owners didn't spend money. During and after the 2012/2013, PSG hit the market buying superstars like Zlatan Ibrahimović, Edinson Cavani, Thiago Silva and other talented players like Lavezzi, Marco Verratti, Lucas Moura and Digne.
 
-Contrary to popular belief, PSG didn't splash huge amounts of money on these players. For majority of their transfers, they paid only a fraction above the market value, they acquired Ibrahimović for **less than 43% of his market value**. Unlike today, PSG at the beginning of the takeover did good business and made many sensible buys ushering in their era of dominance over the Ligue One.
+Contrary to popular belief, PSG didn't splash huge amounts of money on these players. For the majority of their transfers, they paid only a fraction above the market value, they acquired Ibrahimović for **less than 43% of his market value**. Unlike today, PSG at the beginning of the takeover did good business and made many sensible buys ushering in their era of dominance over the Ligue One.
 
 We can see a spike from negative ten thousand euros to a staggering €1.6 million in the season 2013/2014 and the reason may lie in one transfer; Gareth Bale moving from Tottenham Hotspurs to Real Madrid for €101 million. The _Los Blancos_ paid **55% more than the market value** for Bale. In my personal opinion, this I believe is where the trend of overpaying for remotely good players in the hopes that they'd become superstars began.
 
-Don't get me wrong. Gareth Bale is a fantastic player and what he's done with Real Madrid is fantastic. But the amount of the money they've spent on him, the medical expenses and the negative-_ish_ PR he brings with him just doesn't justify his price tag. Every other big transfer after this only made things worse for the transfer market in general expect a few.
+Don't get me wrong. Gareth Bale is a fantastic player and what he's done with Real Madrid is fantastic. But the amount of the money they've spent on him, the medical expenses and the negative-_ish_ PR he brings with him just doesn't justify his price tag. Every other big transfer after this only made things worse for the transfer market, in general expect, a few.
 
 ## Circle C to Circle D:
 
@@ -182,7 +182,7 @@ Don't get me wrong. Gareth Bale is a fantastic player and what he's done with Re
                          2013/2014 ---> 2014/2015 ----> 2015/2016 ----> 2016/2017 ----> 2017/2018
                           €1599980 ---> €2298612  ----> €4167077  ----> €5570964  ----> €6897261
 
-It goes without saying that today's transfer market is bloated and it will only become worse as the seasons go by. And this can be seen in the meteoric rise the Average Difference makes from the 2014/2015 season to the 2017/2018 season; **from €1.6 million to €7 million**. This means that the average amount of money football clubs are paying for players above the market was €7 million as of 2017/2018. That is a massive **337% increase in overspending**. If this trend is to continue, which I'm sure it will, we could see huge amounts of money being paid by clubs to get talent.
+Today's transfer market is bloated and it will only become worse as the seasons go by. And this can be seen in the meteoric rise the Average Difference makes from the 2014/2015 season to the 2017/2018 season; **from €1.6 million to €7 million**. This means that the average amount of money football clubs are paying for players above the market was €7 million as of 2017/2018. That is a massive **337% increase in overspending**. If this trend is to continue, which I'm sure it will, we could see huge amounts of money being paid by clubs to get talent.
 
 Just to paint a clearer picture, here are a few transfers with huge overspending percentages in the five seasons:
 - Neymar - €222 million, **122% more** than market value
@@ -194,7 +194,7 @@ Just to paint a clearer picture, here are a few transfers with huge overspending
 
 These are just a few examples of paying too much for a player. Hundreds of transfers over the past five years have been bloated and I can see it only increasing.
 
-Takeover of clubs by oil money has completely changed the whole game. Pep Guardiola is given a war chest every window and gets the every player he wants. Today, City can field two completely different squads that can challenge for the league title. Like attackers, today wing-backs and fullbacks are of high demand. This is due to the tactics of the game changing. Wingplay has become essential in the past few seasons and the transfers show for it.
+The takeover of clubs by oil money has completely changed the whole game. Pep Guardiola is given a war chest every window and gets every player he wants. Today, City can field two completely different squads that can challenge for the league title. Like attackers, today wing-backs and fullbacks are of high demand. This is due to the tactics of the game evolving frequently. Wing play has become essential in the past few seasons and the transfers show for it.
 
 ## Conclusion:
 
@@ -202,9 +202,9 @@ Straight off, this is bad for the sport. As the bigger and richer clubs continue
 
 Only a few footballers live up to their price tag. Players like Cristiano Ronaldo, Zinedine Zidane, and most recently Virgil Van Dijk are some of the best examples of players worth the extra money.
 
-I don't see a straightforward solution to this problem. Yes...football associations across the globe do have spending caps and regualtions to battle this, but none of them seem to be working as every transfer window we witness a big-money transfer that makes no sense at all.
+I don't see a straightforward solution to this problem. Yes...football associations across the globe do have spending caps and regulations to battle this, but none of them seems to be working as every transfer window we witness a big-money transfer that makes no sense at all.
 
-Till the day football clubs stop paying way above the market value for players and pay for what they're worth and what what they could bring to the club, instead of paying for hype and attention, it'll only become worse. But my pessimestic side says that it's never going to happen.
+Till the day football clubs stop paying way above the market value for players and pay for what they're worth and what they could bring to the club, instead of paying for hype and attention, it'll only become worse. But my pessimistic side says that it's never going to happen.
 
 
 # Part II
@@ -214,18 +214,18 @@ In Part II, I'll try building a prediction model for the market value of players
 #### What is Linear Regression?
 Linear Regression is a type of analysis which creates a model between two variables; the first one being the explanatory variable and the second one being the dependent variable.
 
-Here, we are going to take **Market Value** as the explanatory variable because that's is what we need to calculate and **Transfer Fee** as the dependant variable.
+Here, we are going to take **Market Value** as the explanatory variable because that's is what we need to calculate and **Transfer Fee** as the dependent variable.
 
-> Note: Later on, I'll add more features to dependant variable and try and create a well-defined model that what is present here.
+> Note: Later on, I'll add more features to the dependent variable and try and create a well-defined model that what is present here.
 
 #### Why predict Market Value and not Transfer Fee?
 The transfer amount a club pays has a lot of outside factors influencing it, like the need for the player, the club's stature, their current form, their financial situation and many more. It's also influenced by the player, he should be willing to move and that brings in even more factors into the equation like personal ones such as willing to move to a new country or city and such. Sometimes players can force a move to the club they desire and the selling club could be forced to sell below the market value. Sometimes the buying club could be desperate for a player and the selling club can use this to their advantage and make the former pay more. 
 
-These are just the basic reasons why we can't truly predict the Transfer Fee. But what we can and will try to do is to predict the market value of future players.
+These are just a few reasons why we can't truly predict the Transfer Fee. But what we can and will try to do is to predict the market value of future players.
 
-We're going to be using _scikit learn_ to help us with building this prediction model. Like in Part I, I start off by reading the dataset into an object and dropping the rows with NaN values.
+We're going to be using _scikit learn_ to help us with building this prediction model. Like in Part I, I start by reading the dataset into an object and dropping the rows with NaN values.
 
-I assign the Tranfer Value to the dependant variable **y** and Market Value to the explanatory variable **X**. Then, using scikit learn, I split the data into training data and test data.
+I assign the Transfer Value to the dependent variable **y** and Market Value to the explanatory variable **X**. Then, using scikit learn, I split the data into training data and test data.
 
 ```python
 c = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20II/Transfers.csv')
@@ -306,12 +306,12 @@ Since our RSME is more than 10% of the mean of Market Value, our model isn't ver
 ## Conclusion:
 
 #### Why is the model inaccurate?
-- Poor (or) Not Enough Features: As of the first version of this project, I haven't added multiple features in our model. Remember when I said, that the Market Value of a football player is determined by his age, birth country, position, skill and so on. And since, the only dependant feature we took here is Tranfer Fee, it isn't sufficient.
+- Poor (or) Not Enough Features: As of the first version of this project, I haven't added multiple features in our model. Remember when I said, that the Market Value of a football player is determined by his age, birth country, position, skill and so on. And since the only dependant feature we took here is Transfer Fee, it isn't sufficient.
 
 
-> Note: In the future, I will add more features, try to vectorize the non-integar values and try and create an accurate model.
+> Note: In the future, I will add more features, try to vectorize the non-integer values and try and create an accurate model.
 
-- The Ever-changing Game: Football happens to be the most popular sport and that makes it an ever-changing sport. For a few years, midfielders are important and then all of a sudden, defenders are the most sought after. One year, Spain is producing the best young talent, another year, Dutch youngsters are setting the stage on fire! Even if we managed to have a perfect working model right now, it would become obselete in a few seasons.
+- The Ever-changing Game: Football happens to be the most popular sport and that makes it an ever-changing sport. For a few years, midfielders are important and then all of a sudden, defenders are the most sought after. One year, Spain is producing the best young talent, another year, Dutch youngsters are setting the stage on fire! Even if we managed to have a perfect working model right now, it would become obsolete in a few seasons.
 
 #### So, how do you take all this as quantifiable features and use them in a model for a more accurate prediction?
 As Part I of this project says, we can always see trends and understand why such and such happened. But, external factors play a major role in football transfers, even fans and media can hype and inflate a player's market value.

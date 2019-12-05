@@ -1,11 +1,11 @@
 # Spending Trends in Football Clubs and Prediction Model for Football Transfers.
 Understanding Trends in Football Transfers and trying to build a prediction model to predict the market value of players using Python.
 
-There are two parts to this project of mine. The first one is understanding the trend in football transfers over 14 seasons. The second part is where I try to build a prediction model to try and predict the market value of players in the future.
+There are two parts to this project of mine. The first one is understanding the trend in football transfers over 14 seasons. The second part is where I try to build a prediction model to predict the market value of players in the future.
 
 #### Some important things to consider before going into in:
-- This is not the finalised version. As the weeks go by and as I learn new skills, I will keep adding to this repository. I will keep tweaking the code, playing with the model, adding more feature and updating this documentation as frequent as I can.
-- The dataset I'll be using here is from Kaggle. Click [here](https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018) for the Kaggle link. And I'd like to thank Vardan; for creating this excellent dataset.
+- This is not the finalised version. As the weeks go by and as I learn new skills, I will keep adding to this repository. I will keep tweaking the code, playing with the model, adding more feature and updating this documentation as frequently as I can.
+- The dataset I'll be using here is from Kaggle. Click [here](https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018) for the Kaggle link. And I'd like to thank Vardan for creating this excellent dataset.
 - I would love it if you - the reader, have any comments or suggestions about anything. I'm a student and I intend to be one even after I graduate.
 - The code is all in Python 3.7 and I use _PyCharm Community Edition_ as my IDE.
 
@@ -19,9 +19,9 @@ Harry Maguire might be the answer to your defensive problems, but paying €93 m
 
 As the years go by, we can only expect the trend to rise - clubs will only go out of their way and we can see them paying more and more in the hopes of getting that one player who’ll take them to great heights. 
 
-Rumours of PSG wonderkid, Kylian Mbappé having a price tag of €500 million isn’t far from the truth. And only one club is even remotely considering to buy him at that price.
+Rumours of PSG wonderkid, Kylian Mbappé, having a price tag of €500 million isn’t far from the truth. And only one club is even remotely considering to buy him at that price.
 
-_Now how is that fair for the rest of the clubs?_
+_Now how is that fair to the rest of the clubs?_
 
 As I've mentioned before, the trend of paying more for a player will only increase as the years go by.
 
@@ -61,7 +61,7 @@ Before we go into the, let me explain a few parameters we'll be using extensivel
 
 Players like Neymar, Vinicius Junior, Dybala, Eden Hazard, Marco Reus, and Kevin de Bruyne have a huge market value. Not only are they talented and proven, but they also bring a huge brand image with them making them the player to watch wherever they go.
 
-**Transfer Fee:** The Transfer Fee is the amount of money a club pays to acquire the services of a player. A club can match the Market Value, pay more or even pay less for the player. It depends on a lot of external factors. For starters, if a football club needs a goalkeeper badly and the transfer window deadline is fast approaching, they would be forced to pay more than the normal/market value - _the best example is Chelsea getting Kepa Arrizabalaga for a staggering €80 million making him the world's most expensive goalkeeper._
+**Transfer Fee:** The Transfer Fee is the amount of money a club pays to acquire the services of a player. A club can match the Market Value, pay more or even pay less for the player. It depends a lot on external factors. For starters, if a football club needs a goalkeeper badly and the transfer window deadline is fast approaching, they would be forced to pay more than the normal/market value - _the best example is Chelsea getting Kepa Arrizabalaga for a staggering €80 million making him the world's most expensive goalkeeper._
 
 So, my goal here is to understand the trend of how clubs pay for players over multiple seasons. And to understand and study that, I've to introduce a new parameter; **Difference**.
 
@@ -69,9 +69,9 @@ So, my goal here is to understand the trend of how clubs pay for players over mu
 
 #### What does _Difference_ tell us?
 
-It's simple enough to see what Difference is; it's just the difference between the Transfer Fee and Market Value. But in a footballing context, it's a bit more elaborate. As you know, a club sets a market value for a player based on various factors(age, position, birth country, skill, etc), and a buying club almost always never pays the exact amount set by the selling club. It's sometimes(mostly) more than the market value and sometimes less.
+It's simple enough to see what Difference is; it's just the difference between the Transfer Fee and Market Value. But in a footballing context, it's a bit more elaborate. As you know, a club sets a market value for a player based on various factors(age, position, birth country, skill, etc), and a buying club almost never pays the exact amount set by the selling club. It's sometimes(mostly) more than the market value and sometimes less.
 
-With Difference, we can see how much extra/less a club has paid for a certain player. And for the majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few seasons earlier, Liverpool were in dire need of a defender and they ended up paying €78.8 million. These are some of the cases where the club paid way more than the market value.
+With Difference, we can see how much more/less a club has paid for a certain player. And for the majority of the players, there is always a story or reason as to why the club paid what they paid. For example, as mentioned before, Chelsea needed a new keeper after the Thibaut Courtois left to Real Madrid, so they ended up paying a large amount for Arrizabalaga. Likewise, a few seasons earlier, Liverpool were in dire need of a defender and they ended up paying €78.8 million. These are some of the cases where the club paid way more than the market value.
 
 There are also cases where the buying club paid less than the market value. A small example of this is when legendary journeyman Zlatan Ibrahimović went for a fraction less than his Market Value from Juventus to Inter. There is a reason for this which will be explained later.
 
@@ -157,7 +157,7 @@ This phenomenon can be attributed to the [_2006 Italian Football Scandal_](https
 
 Towards the end of the 2005/2006 season, many Italian clubs were caught in a match-fixing scandal. Investigations discovered that teams paid money to get favourable referees for their matches helping them win games.
 
-The Calciopoli scandal verdict was huge. Most notably, Italian Football Giants; _Juventus_ were fined €75,000, stripped of their 2004/2005 Serie A title, relegated to Serie and deducted 30 points at the start of the 2006/2007 season. This relegation resulted in the majority of their big players leaving. And due to the scandal, Juventus didn't have any selling power over their players who didn't want to play in a lower league. They had to undersell big players like Zlatan Ibrahimović, Fabio Cannavaro, Patrick Vieira and Gianluca Zambrotta.
+The Calciopoli scandal verdict was huge. Most notably, Italian Football Giants; _Juventus_ were fined €75,000, stripped of their 2004/2005 Serie A title, relegated to Serie B and deducted 30 points at the start of the 2006/2007 season. This relegation resulted in the majority of their big players leaving. And due to the scandal, Juventus didn't have any selling power over their players who didn't want to play in a lower league. They had to undersell big players like Zlatan Ibrahimović, Fabio Cannavaro, Patrick Vieira and Gianluca Zambrotta.
 
 But how are few players being sold for less than their market value result in a **2860% decrease in spending**?
 

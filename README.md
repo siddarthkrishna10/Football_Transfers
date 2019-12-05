@@ -209,3 +209,18 @@ Till the day football clubs stop paying way above the market value for players a
 
 # Part II
 
+In Part II, I'll try building a prediction model for the market value of players based on the data from the dataset. But first...
+
+#### What is Linear Regression?
+Linear Regression is a type of analysis which creates a model between two variables; the first one being the explanatory variable and the second one being the dependent variable.
+
+Here, we are going to take **Market Value** as the explanatory variable because that's is what we need to calculate and **Transfer Fee** as the dependant variable.
+
+```
+**Note**: Later on, I'll add more features to dependant variable and try and create a well-defined model that what is present here
+```
+
+#### Why predict Market Value and not Transfer Fee?
+The transfer amount a club pays has a lot of outside factors influencing it, like the need for the player, the club's stature, their current form, their financial situation and many more. It's also influenced by the player, he should be willing to move and that brings in even more factors into the equation like personal ones such as willing to move to a new country or city and such. Sometimes players can force a move to the club they desire and the selling club could be forced to sell below the market value. Sometimes the buying club could be desperate for a player and the selling club can use this to their advantage and make the former pay more. 
+
+These are just the basic reasons why we can't truly predict the Transfer Fee. But what we can and will try to do is to predict the market value of future players.

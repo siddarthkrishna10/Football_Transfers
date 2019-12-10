@@ -196,6 +196,20 @@ These are just a few examples of paying too much for a player. Hundreds of trans
 
 The takeover of clubs by oil money has completely changed the whole game. Pep Guardiola is given a war chest every window and gets every player he wants. Today, City can field two completely different squads that can challenge for the league title. Like attackers, today wing-backs and fullbacks are of high demand. This is due to the tactics of the game evolving frequently. Wing play has become essential in the past few seasons and the transfers show for it.
 
+***Updates: 12/10/2019***
+A quick update. I've applied pairplots using seaborn on the age of the player, market value and transfer fee.
+Here is the code snippet:
+
+```python
+pp = sns.pairplot(d1, y_vars=['Age'], x_vars=['Market_value', 'Transfer_fee'], hue="Season")
+plt.show()
+```
+And this is the output.
+
+![PairPlot_Transfer](https://github.com/siddarthkrishna10/Football_Transfers/blob/master/Part%20I/PairPlot_Snap.png)
+
+Due to the high number of entries, the plot looks a little messy. But I've circled out the portion that's interesting with a red circle. As you can see, players between the age of 20 to 25 are of valued higher in the market value irrespetive of which season. Young, skilled players always carry a huge valuation with them and these days, that can led to hype and high transfer fees. The yellow and blue circle indicates the market value of Mbappe and Transfer fee of Neymar respectively; the highest valued player and the costliest player.
+
 ## Conclusion:
 
 Straight off, this is bad for the sport. As the bigger and richer clubs continue to pay exaggerated prices for players, the clubs without the funds and resources can be left behind without the means to compete. This creates a huge gap in the league tables and will see a huge decline in the overall quality of football each season.

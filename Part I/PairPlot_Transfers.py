@@ -13,6 +13,5 @@ d = pd.read_csv('https://github.com/siddarthkrishna10/Football_Transfers/blob/ma
 d1 = d.dropna()
 
 #Plotting the data in pairplots using seaborn
-pp = sns.pairplot(d1, y_vars=['Age'], x_vars=['Market_value', 'Transfer_fee'],
-                  hue="Season", palette="Set2")
+pp = sns.pairplot(d1, y_vars=['Age'], x_vars=['Market_value', 'Transfer_fee'], hue="Season")
 plt.show()

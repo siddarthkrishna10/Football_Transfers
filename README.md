@@ -201,6 +201,7 @@ A quick update. I've applied pairplots using seaborn on the age of the player, m
 Here is the code snippet:
 
 ```python
+#Plotting the data in pairplots using seaborn
 pp = sns.pairplot(d1, y_vars=['Age'], x_vars=['Market_value', 'Transfer_fee'], hue="Season")
 plt.show()
 ```

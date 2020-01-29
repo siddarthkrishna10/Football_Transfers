@@ -34,7 +34,7 @@ As I've mentioned before, the trend of paying more for a player will only increa
 This dataset contains all the transfers that have taken place from the 2000/2001 season till the 2018/2019 season.
 
 It contains:
-- Name of the PLayers
+- Name of the Players
 - Primary Position they play 
 - Age of the Player
 - The club they've been bought from
